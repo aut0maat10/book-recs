@@ -1,1 +1,5 @@
 <h1>Index</h1>
+
+<% @books.each do |book| %>
+  <h3><%= link_to book.title, book_path(book) %></h3>
+<% end %>
