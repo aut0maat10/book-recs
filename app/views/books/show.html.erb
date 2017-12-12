@@ -6,6 +6,7 @@
 <h4>Description:</h4>
 <p><%= @book.description %></p>
 
+<div><%= render @book.reviews %></div>
 <div><%= link_to "Add Review", new_book_review_path(@book) %></div>
 
 <%= link_to "Home", root_path %><br>
