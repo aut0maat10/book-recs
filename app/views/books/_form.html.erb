@@ -1,12 +1,6 @@
 <%= form_for @book do |f| %>
-  <%= f.label 'Genre' %>
-  <%= f.collection_select :genre_id, Genre.all, :id, :name %><br><br>
-  <!-- <%= f.text_field :genre_name, list: "genres_autocomplete" %><br><br>
-    <datalist id="genres_autocomplete">
-      <% Genre.all.each do |genre| %>
-        <option value="<%= genre.name %>">
-          <% end %>
-    </datalist> -->
+  
+  <%= f.collection_select :genre_id, Genre.all, :id, :name, {prompt: "Select a genre"}, {class: "form-control"} %><br>
 
   <%= f.label 'Title'%><br>
   <%= f.text_field :title %><br>
