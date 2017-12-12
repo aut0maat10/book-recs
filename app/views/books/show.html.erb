@@ -6,6 +6,8 @@
 <h4>Description:</h4>
 <p><%= @book.description %></p>
 
-<%= link_to "Home", root_path %> 
-<%= link_to "Edit", edit_book_path(@book) %>
+<div><%= link_to "Add Review", new_book_review_path(@book) %></div>
+
+<%= link_to "Home", root_path %><br>
+<%= link_to "Edit", edit_book_path(@book) %><br>
 <%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?"} %>

@@ -1,0 +1,10 @@
+<%= form_for([@book, @book.reviews.build]) do |f| %>
+  
+  <%= f.label 'Rating'%><br>
+  <%= f.number_field :rating, in: 1..5 %><br>
+
+  <%= f.label 'Comment'%><br>
+  <%= f.text_area :comment %><br>
+
+  <%= f.submit %>
+<% end %>
