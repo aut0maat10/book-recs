@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'books#index'
-  resources :books
-  resources :users, only: [:index, :show] do
+  resources :books do
     resources :reviews
-  end
+  end 
+  # resources :users, only: [:index, :show] do
+  #   resources :reviews
+  # end
   resources :genres do
     resources :books
   end 
