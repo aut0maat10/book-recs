@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   resources :books
   resources :users, only: [:index, :show] do
     resources :reviews
+  end
+  resources :genres do
+    resources :books
   end 
 end

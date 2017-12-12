@@ -2,8 +2,13 @@ class BooksController < ApplicationController
   
   before_action :find_book, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @books = Book.all
+  def index 
+    if params[:genre_id].nil?
+      @books = Book.all
+    else
+      genre_id = Genre.find_by(id: params[:genre_id]).id 
+      @books = Book.where(genre_id: genre_id)
+    end 
   end 
 
   def new
@@ -23,6 +28,7 @@ class BooksController < ApplicationController
   end
   
   def edit
+    @genres = Genre.all.map { |genre| [genre.name, genre.id] }
   end
 
   def update
