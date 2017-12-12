@@ -9,11 +9,13 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to "BookRecs", root_path, class: "navbar-brand" %>
-        </div>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <%= link_to "BookRecs", root_path, class: "navbar-brand" %>
+            </div>
 
         <ul class="nav navbar-nav">
           
@@ -35,7 +37,7 @@
         <ul class="nav navbar-nav navbar-right">
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Genres<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <% Genre.all.each do |genre| %>
                 <li><%= link_to genre.name, genre_books_path(genre)%></li>
@@ -48,9 +50,11 @@
         </ul>
       </div>
     </nav>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
     <%= yield %>
+    </div>
   </body>
 </html>

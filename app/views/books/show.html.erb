@@ -1,14 +1,27 @@
-
-<h2><%= @book.title %></h2>
-<h3>by <%= @book.author %></h3>
-<h4><%= @book.genre_name %></h4>
-<h4>Year Published: <%= @book.year_published %></h4>
-<h4>Description:</h4>
-<p><%= @book.description %></p>
-
-<div><%= render @book.reviews %></div>
-<div><%= link_to "Add Review", new_book_review_path(@book) %></div>
-
-<%= link_to "Home", root_path %><br>
-<%= link_to "Edit", edit_book_path(@book) %><br>
-<%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?"} %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h2><%= @book.title %></h2>
+    <h3>by <%= @book.author %></h3>
+    <h4><%= @book.genre_name %></h4>
+    <h4>Year Published: <%= @book.year_published %></h4>
+    <h4>Description:</h4>
+    <p><%= @book.description %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div>
+      <p><%= render @book.reviews %></p>
+    </div>
+    <div>
+      <p><%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-primary" %></p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <p><%= link_to "Home", root_path %></p>
+    <p><%= link_to "Edit", edit_book_path(@book) %></p>
+    <p><%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?"} %></p>
+  </div> 
+</div>
