@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get '/auth/facebook/callback' => 'sessions#create'
   root 'books#index'
   resources :books do
     resources :reviews

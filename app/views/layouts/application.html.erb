@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    
       <div class="row">
         <nav class="navbar navbar-default">
           <div class="container">
@@ -30,6 +30,7 @@
               <li>
                 <%= link_to "Log In", new_user_session_path %>
               </li>
+              <li><%= link_to('Log in with Facebook!', '/auth/facebook') %></li>
 
               <% end %>
         </ul>
@@ -51,10 +52,13 @@
       </div>
     </nav>
     </div>
+    <div class="container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
-    <%= yield %>
+      <%= yield %>
     </div>
+    
+    
   </body>
 </html>
