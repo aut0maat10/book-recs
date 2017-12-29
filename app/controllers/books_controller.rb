@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
   
   before_action :find_book, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit]
+  before_action :authenticate_user!, only: [:new, :edit, :show]
 
   def index 
     if params[:genre_id].nil?
@@ -13,7 +13,8 @@ class BooksController < ApplicationController
   end 
 
   def new
-    @book = Book.new 
+    @book = current_user.books.build
+    @book.user_id = current_user.id
   end
 
   def show
@@ -25,7 +26,8 @@ class BooksController < ApplicationController
   end 
 
   def create
-    @book = Book.new(book_params)
+    @book = current_user.books.build(book_params)
+    @book.user_id = current_user.id 
     if @book.save
       redirect_to root_path
     else
@@ -53,7 +55,7 @@ class BooksController < ApplicationController
   private
 
     def book_params
-      params.require(:book).permit(:book_img, :genre_name, :title, :author, :year_published, :description, :genre_id)
+      params.require(:book).permit(:book_img, :genre_name, :title, :author, :year_published, :description, :genre_id, :user_id)
     end
     
     def find_book

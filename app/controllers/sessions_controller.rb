@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
     end
  
     session[:user_id] = @user.id
- 
-    render :root 
+    render "books/index" 
   end
  
   private
