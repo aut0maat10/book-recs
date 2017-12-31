@@ -1,18 +1,6 @@
-class SessionsController < ApplicationController
-  def create
-    @user = User.find_or_create_by(uid: auth['uid']) do |u|
-      u.name = auth['info']['name']
-      u.email = auth['info']['email']
-      u.image = auth['info']['image']
+class SessionsController < Devise::OmniauthCallbacksController
+    def google_oauth2
+        @user = User.from_omniauth(request.env["omniauth.auth"])
+        sign_in_and_redirect @user
     end
- 
-    session[:user_id] = @user.id
-    render "books/index" 
-  end
- 
-  private
- 
-  def auth
-    request.env['omniauth.auth']
-  end
 end

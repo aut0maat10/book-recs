@@ -3,6 +3,9 @@ class Book < ApplicationRecord
   has_many :users, through: :reviews 
   belongs_to :genre
 
+  validates :book_img, :title, :author, :year_published, :description, presence: true
+  
+
   has_attached_file :book_img, styles: { book_index: "250x350>", book_show: "325x475>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :book_img, content_type: /\Aimage\/.*\z/
 

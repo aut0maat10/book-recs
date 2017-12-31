@@ -1,7 +1,22 @@
 <%= form_for @book do |f| %>
+
+<% if @book.errors.any? %>
+  <div id="error_explanation">
+    <h2>There were some errors:</h2>
+
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+        <% end %>
+    </ul>
+  </div>
+  <% end %>
   
   <%= f.collection_select :genre_id, Genre.all, :id, :name, {prompt: "Select a genre"}, {class: "form-control"} %><br>
-
+  
+  <%= f.label 'Cover Image'%><br>
   <%=f.file_field :book_img %><br>
   
   <%= f.label 'Title'%><br>

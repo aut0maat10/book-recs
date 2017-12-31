@@ -40,6 +40,7 @@ gem 'devise', '~> 4.3'
 gem 'paperclip', '~> 5.1'
 gem 'omniauth', '~> 1.7', '>= 1.7.1'
 gem 'omniauth-facebook', '~> 4.0'
+gem 'omniauth-google-oauth2'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 group :development, :test do
