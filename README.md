@@ -28,7 +28,7 @@ Find a bug? [Please submit a new issue.](https://github.com/aut0maat10/book_recs
 This project has been licensed under the [MIT open source license](https://github.com/aut0maat10/book_recs/blob/master/LICENSE)
 
 ## Acknowledgements
-
+This is a Ruby on Rails project for Flatiron School. 
 The app was inspired by [Goodreads](https://www.goodreads.com/). 
 Layout and styling with Bootstrap-Sass inspired by [this tutorial](https://www.youtube.com/watch?v=AMai9EZesXY&t=590s)
 
