@@ -1,24 +1,23 @@
-# README
+# BookRecs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BookRecs is an app for book recommendations and reviews, where a user can add, rate, and review their favorite books. 
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+```
+git clone git@github.com:aut0maat10/book_recs.git
+cd book_recs
+rake db:migrate
+rails s
 
-* System dependencies
+```
+Navigate to http://localhost:3000
 
-* Configuration
+## Contribution
 
-* Database creation
+Find a bug? [Please submit a new issue.](https://github.com/aut0maat10/book_recs/issues/new)
 
-* Database initialization
 
-* How to run the test suite
+## License
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
