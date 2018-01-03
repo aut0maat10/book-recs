@@ -47,6 +47,7 @@
             </ul>
           </li>
           <% if user_signed_in? %>
+            <li><%= link_to "My Reviews", current_user_reviews_path(current_user) %></li>
             <li><%= link_to "Add Book", new_book_path %></li>
             <% end %>
         </ul>

@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   end 
   resources :genres do
     resources :books
+  end
+  
+  resources :users do
+    resources :books, only: [:index]
   end 
+  
+  get 'users/:id/my_reviews', to: 'users#my_reviews', as: :current_user_reviews 
+
 end
