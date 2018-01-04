@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    
+      <!-- ***** Navbar ***** -->
       <div class="row">
         <nav class="navbar navbar-default">
           <div class="container">
@@ -20,20 +20,12 @@
         <ul class="nav navbar-nav">
           
           <% if user_signed_in? %>
-            <li>
-              <%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
-            </li>
-            <% else %>
-              <li>
-                <%= link_to "Sign Up", new_user_registration_path %>
-              </li>
-              <li>
-                <%= link_to "Log In", new_user_session_path %>
-              </li>
-              <li><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %></li>
-              <!-- <li><%= link_to('Log in with Facebook!', '/auth/facebook') %></li> -->
-
-              <% end %>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Log In", new_user_session_path %></li>
+            <li><%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %></li>
+          <% end %>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -54,11 +46,16 @@
       </div>
     </nav>
     </div>
+
+    <!-- End Navbar -->
+
     <div class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     
       <%= yield %>
+      
     </div>
     
     

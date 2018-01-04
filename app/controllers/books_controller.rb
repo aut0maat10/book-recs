@@ -18,6 +18,9 @@ class BooksController < ApplicationController
   end
 
   def show
+    # average rating: if no reviews, average 0.
+    # Else average rating, rounded to half star.
+
     if @book.reviews.blank?
       @average = 0
     else

@@ -3,8 +3,10 @@
     <%= image_tag @book.book_img.url(:book_show), class: "book-show" %>
   </div>
   <div class="col-md-8">
+    
     <h1><%= @book.title %></h1>
     <h2>by <%= @book.author %></h2><br>
+    
     <h4>Average Rating</h4>
     <div class="average-review-rating" data-score=<%= @average %>></div>
     <h5><%= @book.genre_name %></h5>
@@ -14,6 +16,7 @@
     <p><%= @book.description %></p>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-4">
     <div>
@@ -24,6 +27,7 @@
     </div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-4">
     <p><%= link_to "Home", root_path %></p>
@@ -31,22 +35,10 @@
       <p><%= link_to "Edit", edit_book_path(@book) %></p>
       <p><%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?"} %></p>
     <% end %>
-    <!-- <% if session[:user_id] %>
-      <h1>
-        <%= @user.name %>
-      </h1>
-      <h2>Email:
-        <%= @user.email %>
-      </h2>
-      <h2>Facebook UID:
-        <%= @user.uid %>
-      </h2>
-      <img src="<%= @user.image %>">
-      <% else %>
-        <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-          <% end %> -->
   </div> 
 </div>
+
+<!-- Raty -->
 
 <script>
   $('.review-rating').raty({
