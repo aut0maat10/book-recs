@@ -1,3 +1,17 @@
+<% if @review.errors.any? %>
+  <div id="error_explanation">
+    <h2>There were some errors:</h2>
+
+    <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+        <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for([@book, @book.reviews.build]) do |f| %>
   
   <div id="rating-form">

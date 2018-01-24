@@ -20,7 +20,8 @@
 <div class="row">
   <div class="col-md-4">
     <div>
-      <p><%= render @book.reviews %></p>
+      <%= link_to 'Show Reviews', book_reviews_path(@book) %>
+      <!-- <p><%= render @book.reviews %></p> -->
     </div>
     <div>
       <p><%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-primary" %></p>
