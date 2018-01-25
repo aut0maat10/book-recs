@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = @book.reviews
-    :layout => false
+    render layout: false
   end 
 
   def new
