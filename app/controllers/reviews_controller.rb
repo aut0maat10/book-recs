@@ -5,7 +5,12 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = @book.reviews
-    render layout: false
+
+    respond_to do |format|
+      format.html {render 'index.html', layout: false}
+      format.js {render 'app/assets/javascripts/books.js', layout: false}
+    end 
+    # render layout: false
   end 
 
   def new
@@ -17,7 +22,7 @@ class ReviewsController < ApplicationController
     @review.book_id = @book.id
     @review.user_id = current_user.id 
     if @review.save
-      redirect_to book_path(@book)
+      render :index, layout: false  
     else
       render :new
     end 

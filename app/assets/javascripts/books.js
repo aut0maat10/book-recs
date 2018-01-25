@@ -8,7 +8,6 @@ $(function () {
   })
   
   $('#new_review').submit(function(e) {
-    alert('wy u clik dis');
     url = this.action
 
     data = {
@@ -17,8 +16,18 @@ $(function () {
         'rating': $("input[name='review[rating]'").val(),
         'comment': $('#review_comment').val() 
       }
-    }
-    console.log(data)
+    };
+
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: data,
+      success: function(response) { 
+        $('div.reviews').append(response); 
+        $("#new_review").trigger("reset");
+        
+      }
+    })
     e.preventDefault();  
   })
 })
