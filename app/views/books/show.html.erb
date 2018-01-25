@@ -27,8 +27,21 @@
       <!-- <p><%= render @book.reviews %></p> -->
     </div>
     <div class="reviews"></div>
-    <div>
+    <!-- <div>
       <p><%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-primary" %></p>
+    </div> -->
+    <div>
+      <%= form_for([@book, @book.reviews.build]) do |f| %>
+
+        <div id="rating-form">
+          <%= f.label 'Rating'%>
+        </div>
+
+        <%= f.label 'Comment'%><br>
+        <%= f.text_area :comment %><br>
+
+        <%= f.submit %>
+      <% end %>        
     </div>
   </div>
 </div>
@@ -64,5 +77,12 @@
     path: '/assets'
   });
 </script>
+
+  <script>
+    $('#rating-form').raty({
+      path: '/assets',
+      scoreName: 'review[rating]'
+    });
+  </script>
 
 
