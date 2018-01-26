@@ -4,6 +4,18 @@ function Review(attributes){
   this.comment = attributes.comment; 
 }
 
+Review.success = function(json) {
+  const review = new Review(json);
+  const reviewLi = review.renderLI(); 
+
+  $('a.show_reviews').trigger("click");
+  // $('input[name="review[rating]"]').val("")
+  $("#new_review").trigger("reset");
+}
+Review.error = function (response) {
+  console.log("Yu broke it?", response)
+}
+
 $(function () {
   Review.templateSource = $('#review-template').html();
   Review.template = Handlebars.compile(Review.templateSource);
@@ -35,40 +47,9 @@ $(function () {
       dataType: "json",
       method: "POST"
     })
-    .success(function(json){
-      const review = new Review(json);
-      const reviewLi = review.renderLI()
-      $('a.show_reviews').trigger("click");
-      $('input[name="review[rating]"]').val("")
-      $("#new_review").trigger("reset");
-    })
-    .error(function(response){
-      console.log('U blew it', response)
-    })
+    .success(Review.success)
+    .error(Review.error)
+
   })
-
-
-//   $('#new_review').submit(function(e) {
-//     url = this.action
-
-//     data = {
-//       'authenticity_token': $("input[name='authenticity_token']").val(),
-//       'review': {
-//         'rating': $("input[name='review[rating]'").val(),
-//         'comment': $('#review_comment').val() 
-//       }
-//     };
-
-//     $.ajax({
-//       type: "POST",
-//       url: url,
-//       data: data,
-//       success: function(response) { 
-//         $('div.reviews').append(response); 
-//         $("#new_review").trigger("reset");
-//       }
-//     })
-//     e.preventDefault();  
-//   })
 
 })
