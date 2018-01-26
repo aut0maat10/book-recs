@@ -1,10 +1,10 @@
 class ReviewsController < ApplicationController
   before_action :find_book
-  before_action :find_review, only: [:edit, :update, :destroy]
+  before_action :find_review, only: [:edit, :update, :destroy, :show]
   before_action :authenticate_user!, only: [:new, :edit]
 
   def index
-    @reviews = @book.reviews
+    @reviews = @book.reviews 
 
     respond_to do |format|
       format.html {render 'index.html', layout: false}
@@ -15,6 +15,10 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+  end 
+
+  def show
+    render json: @review
   end 
 
   def create
