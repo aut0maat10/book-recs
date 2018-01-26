@@ -1,3 +1,13 @@
+function Review(attributes){
+  this.id = attributes.id;
+  this.rating = attributes.rating;
+  this.comment = attributes.comment; 
+}
+
+Review.prototype.renderLI() = function(){
+  
+}
+
 $(function () {
   $('a.show_reviews').on('click', function(e) {
     $(this).hide();
@@ -8,13 +18,25 @@ $(function () {
   })
   
   // form for reviews
-  $('new_review').submit(function(e){
+  $('#new_review').submit(function(e){
     e.preventDefault();
     const $form = $(this);
     const action = $form.attr('action');
     const params = $form.serialize(); 
 
-    $.post(action, params)
+    $.ajax({
+      url: action,
+      data: params,
+      dataType: "json",
+      method: "POST"
+    })
+    .success(function(json){
+      const review = new Review(json);
+      const reviewLi = review.renderLI()
+    })
+    .error(function(response){
+      console.log('U blew it', response)
+    })
   })
 
 

@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       format.html {render 'index.html', layout: false}
+      # format.json {render json: @book}
       format.js {render 'app/assets/javascripts/books.js', layout: false}
     end 
     # render layout: false
@@ -26,9 +27,13 @@ class ReviewsController < ApplicationController
     @review.book_id = @book.id
     @review.user_id = current_user.id 
     if @review.save
-      render :index, layout: false  
+      respond_to do |f|
+        f.html {redirect_to book_path(@book)}
+        f.json {render json: @book}
+      # render :index, layout: false  
+      end 
     else
-      render :new
+      render 'books/show'
     end 
   end 
 
