@@ -4,8 +4,13 @@ function Review(attributes){
   this.comment = attributes.comment; 
 }
 
-Review.prototype.renderLI() = function(){
-  
+$(function () {
+  Review.templateSource = $('#review-template').html();
+  Review.template = Handlebars.compile(Review.templateSource);
+})
+
+Review.prototype.renderLI = function(){
+  return Review.template(this)
 }
 
 $(function () {
@@ -33,6 +38,9 @@ $(function () {
     .success(function(json){
       const review = new Review(json);
       const reviewLi = review.renderLI()
+      $('a.show_reviews').trigger("click");
+      $('input[name="review[rating]"]').val("")
+      $("#new_review").trigger("reset");
     })
     .error(function(response){
       console.log('U blew it', response)

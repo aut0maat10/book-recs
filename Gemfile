@@ -43,6 +43,7 @@ gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-google-oauth2'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'active_model_serializers'
+gem 'handlebars_assets'
 
 
 group :development, :test do

@@ -13,5 +13,6 @@
 //= require rails-ujs
 //= require jquery
 //= require bootstrap-sprockets
-
+//= require handlebars
+//= require_tree ./templates
 //= require_tree .

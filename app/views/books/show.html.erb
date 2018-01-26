@@ -56,6 +56,23 @@
   </div> 
 </div>
 
+<!-- Handlebars -->
+
+<script id="review-template" type="text/x-handlebars-template">
+  <div class="review">
+    <form class="new_review" id="new_review" action="/books/<%= @book.id %>/reviews" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div id="rating-form">
+        <label>{{rating}}</label>
+        <input name="review[rating]" type="hidden">
+      </div>
+      <label>{{comment}}</label>
+      <textarea name="review[comment]" id="review_comment"></textarea>
+      <input type="submit" name="commit" value="Create Review" data-disable-with="Create Review"    
+    </form>
+  </div>
+</script>
+
 <!-- Raty -->
 
 <script>
