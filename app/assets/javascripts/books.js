@@ -25,7 +25,6 @@ $(function () {
       success: function(response) { 
         $('div.reviews').append(response); 
         $("#new_review").trigger("reset");
-        
       }
     })
     e.preventDefault();  
