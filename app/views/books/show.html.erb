@@ -55,19 +55,15 @@
 
 <!-- Handlebars -->
 
+
+
 <script id="review-template" type="text/x-handlebars-template">
-  <div class="review">
-    <form class="new_review" id="edit_review_{{id}}" action="/books/<%= @book.id %>/reviews/{{id}}" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <div id="rating-form">
-        <label>{{rating}}</label>
-        <input name="review[rating]" type="hidden">
-      </div>
-      <label>{{comment}}</label>
-      <textarea name="review[comment]" id="review_comment"></textarea>
-      <input type="submit" name="commit" value="Create Review" data-disable-with="Create Review"    
-    </form>
-  </div>
+  <form class="new_review" id="new_review" action="/books/<%= @book.id %>/reviews/{{id}}" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="review-rating" data-score={{rating}}></div>
+    <p>{{comment}}</p>
+    
+  </form>
 </script>
 
 
@@ -76,7 +72,7 @@
 <script>
   $('.review-rating').raty({
     readOnly: true,
-    score: function() {
+    score: function () {
       return $(this).attr('data-score');
     },
     path: '/assets'
@@ -93,11 +89,12 @@
   });
 </script>
 
-  <script>
-    $('#rating-form').raty({
-      path: '/assets',
-      scoreName: 'review[rating]'
-    });
-  </script>
+<script>
+  $('#rating-form').raty({
+    path: '/assets',
+    scoreName: 'review[rating]'
+  });
+</script>
+
 
 
