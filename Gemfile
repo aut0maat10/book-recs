@@ -42,6 +42,9 @@ gem 'omniauth', '~> 1.7', '>= 1.7.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-google-oauth2'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'active_model_serializers'
+gem 'handlebars_assets'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

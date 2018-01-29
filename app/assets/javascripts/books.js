@@ -1,32 +1,77 @@
-$(function () {
-  $('a.show_reviews').on('click', function(e) {
-    $(this).hide();
-    $.get(this.href).success(function(response){
-      $('div.reviews').html(response);
-    })
-    e.preventDefault();
-  })
-  
-  $('#new_review').submit(function(e) {
-    url = this.action
+function Review(attributes){
+  this.id = attributes.id;
+  this.rating = attributes.rating;
+  this.comment = attributes.comment; 
+}
 
-    data = {
-      'authenticity_token': $("input[name='authenticity_token']").val(),
-      'review': {
-        'rating': $("input[name='review[rating]'").val(),
-        'comment': $('#review_comment').val() 
-      }
-    };
+Review.success = function(json) {
+  var review = new Review(json);
+  var reviewHTML = review.renderHTML(); 
+  $("#new_review").trigger("reset");
+  $('div.reviews').append(reviewHTML)
+  // location.reload();
+  
+  // $('.review-rating').raty({ score: this.rating });
+  console.log(review)
+
+  
+  //$('a.show_reviews').trigger("click");
+  // $('input[name="review[rating]"]').val("")
+  //$("#new_review").trigger("reset");
+}
+Review.error = function (response) {
+  console.log("Yu broke it?", response)
+}
+
+
+Review.ready = (function () {
+  Review.templateSource = $('#review-template').html();
+  Review.template = Handlebars.compile(Review.templateSource);
+})
+
+Review.prototype.renderHTML = function(){
+  return Review.template(this)
+}
+
+// $(function () {
+//   $('a.show_reviews').on('click', function(e) {
+//     $(this).hide();
+//     $.get(this.href).success(function(response){
+//       $('div.reviews').html(response);
+//     })
+//     e.preventDefault();
+//   })
+  
+  // form for reviews
+
+  // Review.formSubmit = function (e) {
+  //   e.preventDefault()
+  //   var $form = $(this);
+  //   var action = $form.attr("action");
+  //   var params = $form.serialize();
+ 
+
+  
+// })
+
+$(function () {
+  Review.ready()
+
+  $('form#new_review').submit(function (e) {
+    e.preventDefault();
+    const $form = $(this);
+    const action = $form.attr('action');
+    const params = $form.serialize();
 
     $.ajax({
-      type: "POST",
-      url: url,
-      data: data,
-      success: function(response) { 
-        $('div.reviews').append(response); 
-        $("#new_review").trigger("reset");
-      }
+      url: action,
+      data: params,
+      dataType: "json",
+      method: "POST"
     })
-    e.preventDefault();  
+      .success(Review.success)
+      .error(Review.error)
+
   })
+  
 })
