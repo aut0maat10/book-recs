@@ -9,6 +9,7 @@ Review.success = function(json) {
   var reviewHTML = review.renderHTML(); 
   $("#new_review").trigger("reset");
   $('div.reviews').append(reviewHTML)
+  // location.reload();
   
   // $('.review-rating').raty({ score: this.rating });
   console.log(review)

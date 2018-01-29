@@ -14,5 +14,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require handlebars
+//= require turbolinks
 //= require_tree ./templates
 //= require_tree .
