@@ -5,10 +5,10 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = @book.reviews 
-
     respond_to do |format|
+      
+      format.json {render json: @reviews}
       format.html {render 'index.html', layout: false}
-      # format.json {render json: @book}
       format.js {render 'app/assets/javascripts/books.js', layout: false}
     end 
     # render layout: false
@@ -30,8 +30,7 @@ class ReviewsController < ApplicationController
     if @review.save
       respond_to do |f|
         f.html {redirect_to book_path(@book)}
-        f.json {render json: @review}
-      # render :index, layout: false  
+        f.json {render json: @review, status: 201}
       end 
     else
       render 'books/show'

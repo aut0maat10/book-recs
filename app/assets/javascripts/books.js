@@ -5,37 +5,49 @@ function Review(attributes){
 }
 
 Review.success = function(json) {
-  const review = new Review(json);
-  const reviewLi = review.renderLI(); 
+  var review = new Review(json);
+  var reviewHTML = review.renderHTML(); 
+  $('div.reviews').append(reviewHTML)
 
-  $('a.show_reviews').trigger("click");
-  // $('input[name="review[rating]"]').val("")
   $("#new_review").trigger("reset");
+  //$('a.show_reviews').trigger("click");
+  // $('input[name="review[rating]"]').val("")
+  //$("#new_review").trigger("reset");
 }
 Review.error = function (response) {
   console.log("Yu broke it?", response)
 }
 
 $(function () {
+  Review.ready()
+})
+Review.ready = (function () {
   Review.templateSource = $('#review-template').html();
   Review.template = Handlebars.compile(Review.templateSource);
 })
 
-Review.prototype.renderLI = function(){
+Review.prototype.renderHTML = function(){
   return Review.template(this)
 }
 
 $(function () {
-  $('a.show_reviews').on('click', function(e) {
-    $(this).hide();
-    $.get(this.href).success(function(response){
-      $('div.reviews').html(response);
-    })
-    e.preventDefault();
-  })
+//   $('a.show_reviews').on('click', function(e) {
+//     $(this).hide();
+//     $.get(this.href).success(function(response){
+//       $('div.reviews').html(response);
+//     })
+//     e.preventDefault();
+//   })
   
   // form for reviews
-  $('#new_review').submit(function(e){
+
+  // Review.formSubmit = function (e) {
+  //   e.preventDefault()
+  //   var $form = $(this);
+  //   var action = $form.attr("action");
+  //   var params = $form.serialize();
+
+  $('form#new_review').submit(function(e){
     e.preventDefault();
     const $form = $(this);
     const action = $form.attr('action');
@@ -51,5 +63,7 @@ $(function () {
     .error(Review.error)
 
   })
+
+
 
 })
