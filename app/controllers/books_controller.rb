@@ -18,6 +18,11 @@ class BooksController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @book }
+    end 
+    # render json: @book
     # average rating: if no reviews, average 0.
     # Else average rating, rounded to half star.
     if @book.reviews.blank?

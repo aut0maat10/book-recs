@@ -4,16 +4,18 @@
   </div>
   <div class="col-md-8">
     
-    <h1><%= @book.title %></h1>
-    <h2>by <%= @book.author %></h2><br>
+    <h1 class="title"><%= @book.title%></h1>
+    <h2 class="author">by <%= @book.author %></h2><br>
     
     <h4>Average Rating</h4>
     <div class="average-review-rating" data-score=<%= @average %>></div>
-    <h5><%= @book.genre_name %></h5>
-    <h5>Year Published: <%= @book.year_published %></h5>
+    <h5 class="genre"><%= @book.genre_name %></h5>
+    <h5 class="year_published">Year Published: <%= @book.year_published %></h5>
     <br>
     <h4>Description:</h4>
-    <p><%= @book.description %></p>
+    <p class="description"><%= @book.description %></p>
+    <button type="button" class="js-next btn btn-info" data-id="
+    <%=@book.id%>">Next Book</button>
   </div>
 </div>
 
@@ -61,6 +63,30 @@
       <p>{{comment}}</p>
   </form>
 </script>
+
+<script type="text/javascript" charset="utf-8">
+  
+  $(function () {
+    $(".js-next").on("click", function () {
+      const nextId = "<%= @book.next.id %>"
+      //var nextId = parseInt($(".js-next").attr("data-id"));
+      $.get("/books/" + nextId + ".json", function (data) {
+        const bookData = data;
+        $(".book-show").children('img').attr(src, 'bookData["book_img_file_name"]')
+        $(".title").text(bookData["title"]);
+        $(".author").text(bookData["author"]);
+        $(".genre").text(bookData["genre"]);
+        $(".year-published").text(bookData["year-published"]);
+        $(".description").text(bookData["description"]);
+        // re-set the id to current on the link
+        $(".js-next").attr("data-id", bookData["id"]);
+      });
+    });
+  });
+
+</script>
+
+
 
 <!-- Raty -->
 
