@@ -67,18 +67,31 @@
 <script type="text/javascript" charset="utf-8">
   
   $(function () {
-    $(".js-next").on("click", function () {
+    $(".js-next btn").on("click", function () {
       const nextId = "<%= @book.next.id %>"
-      //var nextId = parseInt($(".js-next").attr("data-id"));
       $.get("/books/" + nextId + ".json", function (data) {
         const bookData = data;
-        $(".book-show").children('img').attr(src, 'bookData["book_img_file_name"]')
+        $(".book-show").attr('src', "<%=@book.next.book_img%>")
+        //$(".book-show").prop('src')
         $(".title").text(bookData["title"]);
         $(".author").text(bookData["author"]);
-        $(".genre").text(bookData["genre"]);
+        //debugger
+        //$("div.average-review-rating").attr("data-score", "<%= @average %>")
+        $(".genre").text(bookData["genre"]["name"]);
         $(".year-published").text(bookData["year-published"]);
         $(".description").text(bookData["description"]);
+        const reviews = bookData["reviews"]
+        //debugger
+        $(".reviews").empty()
+        reviews.forEach(function (rev) {
+            $(".reviews").append(rev['rating'])
+            $(".reviews").append("<p>" + rev['comment'] + "</p>")
+            
+        }) 
+      
+       
         // re-set the id to current on the link
+        $(this).button("reset")
         $(".js-next").attr("data-id", bookData["id"]);
       });
     });
