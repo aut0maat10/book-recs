@@ -55,7 +55,7 @@
   </div> 
 </div>
 
-<!-- Handlebars -->
+
 <script id="review-template" type="text/x-handlebars-template">
   <form class="new_review" id="new_review" action="/books/<%= @book.id %>/reviews/{{id}}" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓">
     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
@@ -137,4 +137,4 @@
 
 
 
-
+ 

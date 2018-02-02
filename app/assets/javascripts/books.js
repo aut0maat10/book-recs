@@ -1,6 +1,8 @@
 $(function() {
   compileIndexBookTemplate();
+  // compileShowBookTemplate();
   indexBooks();
+  // showBook(); 
 });
 
 class Book {
