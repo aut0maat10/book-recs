@@ -1,20 +1,33 @@
 
 
-<% if @books.count == 0 %>
+<!-- <% if @books.count == 0 %>
   <h2>There are currently no books in this category</h2>
 <% else %>
 
+
   <div class="row">
-  
-  <% @books.each do |book| %>
-      <div class="col-md-3">
+
+    <% @books.each do |book| %>
+      <div class="book-template-js col-md-3" id="books">
         <a href="/books/<%= book.id %>">
           <%= image_tag book.book_img.url(:book_index), class: "book" %>
         </a>
+        <div class="books-block"></div>
       </div>
-    <% end %>
-
+      <% end %>
+  
   </div>
-
-<% end %>
+  <% end %> -->
+<div class="row">
+  <div class="books-block col-md-3"></div>
+</div>
+<script id="indexBookTemplate" type="text/x-handlebars-template">
+  <div class="row">
+    <div class="book-template-js col-md-3" id="book-{{id}}">
+      <a href="/books/{{id}}" class="js-get-book">
+        <img src='{{ book_img_url }}'>
+      </a>
+    </div>
+  </div>
+</script>
 

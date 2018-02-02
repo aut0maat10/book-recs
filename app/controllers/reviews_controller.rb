@@ -5,12 +5,12 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = @book.reviews 
-    render json: @reviews 
-    # respond_to do |format|
-    #   format.json {render json: @reviews}
-    #   format.html {render 'index.html', layout: false}
-    #   # format.js {render 'app/assets/javascripts/books.js', layout: false}
-    # end 
+    # render json: @reviews
+    respond_to do |format|
+      format.json {render json: @reviews}
+      format.html {render 'index.html', layout: false}
+      # format.js {render 'app/assets/javascripts/books.js', layout: false}
+    end 
   end 
 
   def new

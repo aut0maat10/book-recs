@@ -24,4 +24,11 @@ class Book < ApplicationRecord
     self.try(:genre).try(:name)
   end
 
+  def average
+    self.reviews.average(:rating).to_f.round(2)
+  end 
+
+  def book_img_url
+    book_img.url(:book_index)
+  end 
 end

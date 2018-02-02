@@ -8,7 +8,7 @@
     <h2 class="author">by <%= @book.author %></h2><br>
     
     <h4>Average Rating</h4>
-    <div class="average-review-rating" data-score=<%= @average %>></div>
+    <div class="average-review-rating" data-score=<%= @book.average %>></div>
     <h5 class="genre"><%= @book.genre_name %></h5>
     <h5 class="year_published">Year Published: <%= @book.year_published %></h5>
     <br>
@@ -67,32 +67,29 @@
 <script type="text/javascript" charset="utf-8">
   
   $(function () {
-    $(".js-next btn").on("click", function () {
-      const nextId = "<%= @book.next.id %>"
-      $.get("/books/" + nextId + ".json", function (data) {
+
+    $(".js-next").on("click", function () {
+      let nextId = "<%= @book.next.id %>" 
+      $.get(`/books/${nextId}.json`, function (data) {
         const bookData = data;
-        $(".book-show").attr('src', "<%=@book.next.book_img%>")
-        //$(".book-show").prop('src')
+        $(".book-show").attr('src', bookData["book_img"])
         $(".title").text(bookData["title"]);
         $(".author").text(bookData["author"]);
         //debugger
-        //$("div.average-review-rating").attr("data-score", "<%= @average %>")
+        $("div.average-review-rating").attr("data-score", bookData["average"])
         $(".genre").text(bookData["genre"]["name"]);
         $(".year-published").text(bookData["year-published"]);
         $(".description").text(bookData["description"]);
         const reviews = bookData["reviews"]
-        //debugger
         $(".reviews").empty()
         reviews.forEach(function (rev) {
             $(".reviews").append(rev['rating'])
             $(".reviews").append("<p>" + rev['comment'] + "</p>")
             
         }) 
-      
-       
         // re-set the id to current on the link
-        $(this).button("reset")
         $(".js-next").attr("data-id", bookData["id"]);
+        nextId = "<%= @book.next.id %>"
       });
     });
   });
@@ -118,7 +115,7 @@
 <script>
   $('.average-review-rating').raty({
     readOnly: true,
-    score: function() {
+    score: function () {
       return $(this).attr('data-score')
     },
     path: '/assets'
@@ -131,6 +128,9 @@
     scoreName: 'review[rating]'
   });
 </script>
+
+
+ 
 
 
 

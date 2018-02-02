@@ -10,6 +10,10 @@ class BooksController < ApplicationController
       genre_id = Genre.find_by(id: params[:genre_id]).id 
       @books = Book.where(genre_id: genre_id)
     end 
+    respond_to do |f|
+      f.html {render :index}
+      f.json {render json: @books, methods: [:book_img]}
+    end 
   end 
 
   def new
@@ -20,7 +24,7 @@ class BooksController < ApplicationController
   def show
     respond_to do |format|
       format.html { render :show }
-      format.json { render json: @book }
+      format.json { render json: @book, :methods => [:book_img_url] }
     end 
     # render json: @book
     # average rating: if no reviews, average 0.
@@ -28,7 +32,8 @@ class BooksController < ApplicationController
     if @book.reviews.blank?
       @average = 0
     else
-      @average = @book.reviews.average(:rating).round(2)
+      @average = @book.average
+      #@average = @book.reviews.average(:rating).round(2)
     end 
   end 
 
@@ -62,7 +67,7 @@ class BooksController < ApplicationController
   private
 
     def book_params
-      params.require(:book).permit(:book_img, :genre_name, :title, :author, :year_published, :description, :genre_id, :user_id)
+      params.require(:book).permit(:book_img, :genre_name, :title, :author, :year_published, :description, :genre_id, :user_id, :average)
     end
     
     def find_book
