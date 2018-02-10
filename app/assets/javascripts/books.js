@@ -3,6 +3,7 @@ $(function() {
   // compileShowBookTemplate();
   indexBooks();
   // showBook(); 
+
 });
 
 class Book {
