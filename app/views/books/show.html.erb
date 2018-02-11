@@ -80,12 +80,10 @@
 
         currentBookId = parseInt(data.currentTarget.dataset.id)
         currentIndex = idArray.indexOf(currentBookId);
-          
         $.get(`/books/${idArray[currentIndex + 1]}.json`, function (data) {
           
           const newBook = new Book(data);
           //const bookData = data;
-          //debugger
           $(".book-show").attr('src', newBook.book_img)
           $(".title").text(newBook.title);
           $(".author").text(newBook.author);
