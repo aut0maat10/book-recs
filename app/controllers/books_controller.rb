@@ -29,12 +29,12 @@ class BooksController < ApplicationController
     # render json: @book
     # average rating: if no reviews, average 0.
     # Else average rating, rounded to half star.
-    if @book.reviews.blank?
-      @average = 0
-    else
-      @average = @book.average
+    # if @book.reviews.blank?
+    #   @average = 0
+    # else
+    #   @average = @book.average
       #@average = @book.reviews.average(:rating).round(2)
-    end 
+#end 
   end 
 
   def create
