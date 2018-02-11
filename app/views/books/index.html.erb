@@ -1,6 +1,4 @@
-
-
-<!-- <% if @books.count == 0 %>
+<% if @books.count == 0 %>
   <h2>There are currently no books in this category</h2>
 <% else %>
 
@@ -17,21 +15,12 @@
       <% end %>
   
   </div>
-  <% end %> -->
-
+  <% end %>
 
 <div class="books-block"></div>
 
 
-<script id="indexBookTemplate" type="text/x-handlebars-template">
-  <div class="row">
-    <div class="book-template-js col-md-3" id="book-{{id}}">
-      <a href="/books/{{id}}" class="js-get-book">
-        <img src='{{ book_img_url }}'>
-      </a>
-    </div>
-  </div>
-</script>
+
 
 
 
