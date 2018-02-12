@@ -72,7 +72,22 @@
     }
   }
 
+  //class Review {
+  //  constructor(data) {
+  //    this.id = data.id;
+  //    this.rating = data.rating;
+  //    this.comment = data.comment; 
+   //   this.user_id = data.user_id;
+  //    this.book_id = data.book_id;
+  //  }
+  //}
+ // Review.prototype.renderHTML = function () {
+ //   return `<div class="review-rating" data-score="${this.rating}"></div><p>${this.comment}`
+  //}
+
   $(function () {
+    
+    
     $.get('/books', function (data) {
       idArray = data.map(book => book.id)
       
@@ -101,6 +116,28 @@
           // re-set the id to current on the link
           $(".js-next").attr("data-id", newBook.id);
           nextId = idArray[currentIndex +1]
+
+          
+            //$('#new_review').submit(function (event) {
+            //  event.preventDefault();
+            //  $.ajax({
+            //    url: `/books/${newBook.id}/reviews`, // $(this).attr('action'),
+            //    type: $(this).attr('method'),
+            //    dataType: 'json',
+            //    data: $(this).serialize(),
+            //    success: function (data) {
+            //      const newReview = new Review(data)
+            //      const reviewHTML = newReview.renderHTML();
+            //      $(".reviews").append(reviewHTML)
+            //      $("#new_review").trigger("reset");
+            //    },
+            //    error: function (response) {
+            //      alert('error', response);
+            //    }
+            //  });
+            //})
+
+          
 
           // Raty scripts for 'next' button 
 

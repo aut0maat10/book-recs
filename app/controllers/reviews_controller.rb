@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     respond_to do |format|
       format.json {render json: @reviews}
       format.html {render 'index.html', layout: false}
-      # format.js {render 'app/assets/javascripts/books.js', layout: false}
+      format.js 
     end 
   end 
 
@@ -23,7 +23,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @book.reviews.build(review_params)
-    # @review = Review.new(review_params)
+    #@review = Review.new(review_params)
     @review.book_id = @book.id
     @review.user_id = current_user.id 
     if @review.save

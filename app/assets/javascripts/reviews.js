@@ -1,52 +1,58 @@
-// function Review(attributes){
-//   this.id = attributes.id;
-//   this.rating = attributes.rating;
-//   this.comment = attributes.comment; 
-// }
+class Review {
+  constructor(data) {
+    this.id = data.id;
+    this.rating = data.rating;
+    this.comment = data.comment;
+    this.user_id = data.user.id;
+    this.book_id = data.book.id;
+  }
+}
+Review.prototype.renderHTML = function () {
+  return `<div class="review-rating" data-score="${this.rating}"></div><p>${this.comment}`
+}
 
-// Review.success = function(json) {
-//   var review = new Review(json);
-//   var reviewHTML = review.renderHTML(); 
-//   $("#new_review").trigger("reset");
-//   $('div.reviews').append(reviewHTML)
- 
-//   console.log(review)
+$(function (){
+  $('#new_review').submit(function (event) {
+    event.preventDefault();
+    
+    $.ajax({
+      url: $(this).attr('action'),
+      type: $(this).attr('method'),
+      dataType: 'json',
+      data: $(this).serialize(),
+      success: function (data) {
+        const newReview = new Review(data)
+        const reviewHTML = newReview.renderHTML();
+        $("#new_review").trigger("reset");
+        $(".reviews").append(reviewHTML)
 
-  
+        // Raty scripts 
+        $('.review-rating').raty({
+          readOnly: true,
+          score: function () {
+            return $(this).attr('data-score');
+            $('.star-rating').raty('reload')
+          },
+          path: '/assets'
+        });
 
-// }
-// Review.error = function (response) {
-//   console.log("Yu broke it?", response)
-// }
+        $('.average-review-rating').raty({
+          readOnly: true,
+          score: function () {
+            return $(this).attr('data-score')
+          },
+          path: '/assets'
+        });
 
-
-// Review.ready = (function () {
-//   Review.templateSource = $('#review-template').html();
-//   Review.template = Handlebars.compile(Review.templateSource);
-// })
-
-// Review.prototype.renderHTML = function(){
-//   return Review.template(this)
-// }
-
-// $(function () {
-//   Review.ready()
-
-//   $('form#new_review').submit(function (e) {
-//     e.preventDefault();
-//     const $form = $(this);
-//     const action = $form.attr('action');
-//     const params = $form.serialize();
-
-//     $.ajax({
-//       url: action,
-//       data: params,
-//       dataType: "json",
-//       method: "POST"
-//     })
-//       .success(Review.success)
-//       .error(Review.error)
-
-//   })
-  
-// })
+        $('#rating-form').raty({
+          path: '/assets',
+          scoreName: 'review[rating]'
+        });
+         // End Raty scripts
+      },
+      error: function (response) {
+        alert('error', response);
+      }
+    });
+  })
+})
