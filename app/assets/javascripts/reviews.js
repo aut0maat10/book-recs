@@ -3,14 +3,15 @@ class Review {
     this.id = data.id;
     this.rating = data.rating;
     this.comment = data.comment;
-    this.user_id = data.user.id;
-    this.book_id = data.book.id;
+    this.userID = data.user.id;
+    this.bookID = data.book.id;
   }
 }
 Review.prototype.renderHTML = function () {
   return `<div class="review-rating" data-score="${this.rating}"></div><p>${this.comment}`
 }
 
+// New Review Form Submit
 $(function (){
   $('#new_review').submit(function (event) {
     event.preventDefault();
@@ -21,12 +22,14 @@ $(function (){
       dataType: 'json',
       data: $(this).serialize(),
       success: function (data) {
+        // create new review object, pass in data to renderHTML()
         const newReview = new Review(data)
         const reviewHTML = newReview.renderHTML();
+        // reset form, append HTML to div
         $("#new_review").trigger("reset");
         $(".reviews").append(reviewHTML)
 
-        // Raty scripts 
+        // Raty scripts for rendering stars
         $('.review-rating').raty({
           readOnly: true,
           score: function () {

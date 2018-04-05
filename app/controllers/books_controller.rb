@@ -25,16 +25,7 @@ class BooksController < ApplicationController
     respond_to do |format|
       format.html { render :show }
       format.json { render json: @book, :methods => [:book_img_url] }
-    end 
-    # render json: @book
-    #average rating: if no reviews, average 0.
-    #Else average rating, rounded to half star.
-    # if @book.reviews.blank?
-    #   @average = 0
-    # else
-    #   @average = @book.average
-    #   @average = @book.reviews.average(:rating).round(2)
-    # end 
+    end  
   end 
 
   def create
