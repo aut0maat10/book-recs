@@ -1,0 +1,990 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2017-12-11 23:27:09.060274'
+    - '2017-12-11 23:27:09.060274'
+
+---
+books:
+  columns:
+  - id
+  - title
+  - author
+  - year_published
+  - description
+  - created_at
+  - updated_at
+  - genre_id
+  - book_img_file_name
+  - book_img_content_type
+  - book_img_file_size
+  - book_img_updated_at
+  - user_id
+  records: 
+  - - 2
+    - The Dharma Bums
+    - Jack Kerouac
+    - 1958
+    - 'Two ebullient young men search for Truth the Zen way: from marathon wine-drinking
+      bouts, poetry jam sessions, and "yabyum" in San Francisco''s Bohemia to solitude
+      in the high Sierras and a vigil atop Desolation Peak in Washington State. Published
+      just a year after On the Road put the Beat Generation on the map, The Dharma
+      Bums is sparked by Kerouac''s expansiveness, humor, and a contagious zest for
+      life.'
+    - '2017-12-12 02:11:59.424200'
+    - '2018-01-03 19:47:18.220737'
+    - 2
+    - dharma_bums.jpg
+    - image/jpeg
+    - 98861
+    - '2017-12-13 16:00:44.850067'
+    - 4
+  - - 4
+    - Miss Lonelyhearts
+    - Nathanael West
+    - 1933
+    - 'As described by Atkinson in the NY Times: "A scornful feature editor of a newspaper
+      picks an ambitious young reporter to conduct the advice of the lovelorn column.
+      Ambitious, opportunistic, ''Miss Lonelyhearts,'' as the conductor of the column
+      is inevitably dubbed, begins with contempt of the correspondents and confidence
+      in his own cleverness. As time goes on, the genuineness of the agony in the
+      letters that come in gets under the skin of the columnist. He is distressed
+      to find himself presiding over a monstrous swindle. For he is an idealist in
+      collision with humanity, as his diabolical managing editor expresses it."'
+    - '2017-12-12 03:06:44.230198'
+    - '2017-12-13 16:13:40.317213'
+    - 2
+    - miss_lonelyhearts.jpg
+    - image/jpeg
+    - 33687
+    - '2017-12-13 16:13:40.053676'
+    - 
+  - - 5
+    - Faceless Killers
+    - Henning Mankell
+    - 1991
+    - "It was a senselessly violent crime: on a cold night in a remote Swedish farmhouse
+      an elderly farmer is bludgeoned to death, and his wife is left to die with a
+      noose around her neck. And as if this didn’t present enough problems for the
+      Ystad police Inspector Kurt Wallander, the dying woman’s last word is foreign,
+      leaving the police the one tangible clue they have–and in the process, the match
+      that could inflame Sweden’s already smoldering anti-immigrant sentiments. \r\n\r\nUnlike
+      the situation with his ex-wife, his estranged daughter, or the beautiful but
+      married young prosecuter who has piqued his interest, in this case, Wallander
+      finds a problem he can handle. He quickly becomes obsessed with solving the
+      crime before the already tense situation explodes, but soon comes to realize
+      that it will require all his reserves of energy and dedication to solve."
+    - '2017-12-12 16:08:05.623604'
+    - '2017-12-13 16:15:11.683403'
+    - 1
+    - faceless_killers.jpg
+    - image/jpeg
+    - 41877
+    - '2017-12-13 16:15:11.281797'
+    - 
+  - - 8
+    - Mrs Dalloway
+    - Virginia Woolf
+    - 1925
+    - In Mrs. Dalloway, the novel on which the movie The Hours was based, Virginia
+      Woolf details Clarissa Dalloway’s preparations for a party of which she is to
+      be hostess, exploring the hidden springs of thought and action in one day of
+      a woman’s life. The novel "contains some of the most beautiful, complex, incisive
+      and idiosyncratic sentences ever written in English, and that alone would be
+      reason enough to read it. It is one of the most moving, revolutionary artworks
+      of the twentieth century" (Michael Cunningham).
+    - '2017-12-13 16:28:05.161565'
+    - '2017-12-13 16:28:05.161565'
+    - 2
+    - mrs_dalloway.jpg
+    - image/jpeg
+    - 72525
+    - '2017-12-13 16:28:04.723210'
+    - 
+  - - 9
+    - The Rum Diary
+    - Hunter S. Thompson
+    - 1998
+    - Begun in 1959 by a twenty-two-year-old Hunter S. Thompson, The Rum Diary is
+      a brilliantly tangled love story of jealousy, treachery, and violent alcoholic
+      lust in the Caribbean boomtown that was San Juan, Puerto Rico, in the late 1950s.
+      The narrator, freelance journalist Paul Kemp, irresistibly drawn to a sexy,
+      mysterious woman, is soon thrust into a world where corruption and get-rich-quick
+      schemes rule and anything (including murder) is permissible. Exuberant and mad,
+      youthful and energetic, this dazzling comedic romp provides a fictional excursion
+      as riveting and outrageous as Thompson’s Fear and Loathing books.
+    - '2017-12-13 16:31:35.205329'
+    - '2017-12-13 16:31:35.205329'
+    - 2
+    - rum_diary.jpg
+    - image/jpeg
+    - 53724
+    - '2017-12-13 16:31:34.921173'
+    - 
+  - - 10
+    - The Happy Birthday of Death
+    - Gregory Corso
+    - 1960
+    - It is true that he has been one of the inner circle of the 'Beats' from the
+      first, but many admirers of his poetry feel that it belongs quite as much to
+      other and older traditions in world literature. One of these is the revival
+      of pure poetry whenever an “original”––be it Rimbaud or Whitman––has broken
+      with current verse conventions to give free rein to the magic of language. Another
+      is that ancient pre-occupation of poets––the sense of the immediacy of death.
+      Like Villon or Dylan Thomas, Corso lives close to the mystery of death. It is,
+      perhaps, his central theme, on which variations ranging from the terrible to
+      the comic are sounded. But Corso is seldom macabre. A bursting vitality always
+      carries him back to the sensations of the living, though always it is the reality
+      behind the obvious which has caught his eye. “How I love to probe life,” Corso
+      has written, “That’s what poetry is to me, a wondrous prober… It’s not the metre
+      or measure of a line, a breath; not ‘law’ music; but the assembly of great eye
+      sounds placed into an inspired measured idea.”
+    - '2017-12-13 16:56:07.444952'
+    - '2017-12-13 16:56:27.523553'
+    - 3
+    - happy_bday_o_death.jpg
+    - image/jpeg
+    - 163169
+    - '2017-12-13 16:56:27.017595'
+    - 
+  - - 12
+    - The Waste Land
+    - T. S. Eliot
+    - 1922
+    - The Waste Land is a long poem by T. S. Eliot, widely regarded as one of the
+      most important poems of the 20th century and a central work of modernist poetry.[2][3]
+      Published in 1922, the 434-line[B] poem first appeared in the United Kingdom
+      in the October issue of The Criterion and in the United States in the November
+      issue of The Dial. It was published in book form in December 1922. Among its
+      famous phrases are "April is the cruellest month", "I will show you fear in
+      a handful of dust", and the mantra in the Sanskrit language "Shantih shantih
+      shantih."
+    - '2017-12-13 23:05:27.179647'
+    - '2017-12-13 23:05:27.179647'
+    - 3
+    - waste_land.jpg
+    - image/jpeg
+    - 46134
+    - '2017-12-13 23:05:26.887040'
+    - 1
+  - - 13
+    - Cat's Eye
+    - Maragaret Atwood
+    - 1998
+    - Meh fam thundercats live-edge shabby chic you probably haven't heard of them
+      photo booth jean shorts, aesthetic venmo woke. Raclette plaid palo santo, bushwick
+      dreamcatcher hoodie pok pok yr activated charcoal +1 roof party mlkshk banh
+      mi literally health goth. Poutine godard cardigan synth gluten-free. Af farm-to-table
+      drinking vinegar mustache, semiotics asymmetrical beard microdosing tbh.
+    - '2017-12-29 16:09:53.698261'
+    - '2017-12-29 16:10:21.812872'
+    - 2
+    - cats_eye.jpg
+    - image/jpeg
+    - 47858
+    - '2017-12-29 16:09:53.345939'
+    - 4
+  - - 15
+    - A Visit from the Goon Squad
+    - Jennifer Egan
+    - 2010
+    - Jennifer Egan’s spellbinding interlocking narratives circle the lives of Bennie
+      Salazar, an aging former punk rocker and record executive, and Sasha, the passionate,
+      troubled young woman he employs. Although Bennie and Sasha never discover each
+      other’s pasts, the reader does, in intimate detail, along with the secret lives
+      of a host of other characters whose paths intersect with theirs, over many years,
+      in locales as varied as New York, San Francisco, Naples, and Africa.
+    - '2017-12-31 16:41:35.877317'
+    - '2017-12-31 16:41:35.877317'
+    - 2
+    - goon_squad.jpeg
+    - image/jpeg
+    - 8255
+    - '2017-12-31 16:41:35.660202'
+    - 1
+  - - 16
+    - My Struggle
+    - Karl Ove Knausgaard
+    - 2009
+    - "Mustache asymmetrical slow-carb actually. Street art flannel literally, echo
+      park roof party bitters pitchfork disrupt twee 90's affogato fam raclette. Subway
+      tile vegan readymade narwhal. Single-origin coffee vinyl VHS vegan ugh gluten-free
+      mlkshk succulents cliche squid butcher listicle taiyaki salvia. Occupy church-key
+      live-edge ugh adaptogen affogato hexagon thundercats portland fanny pack beard.
+      Swag chambray shaman pour-over artisan. Echo park yuccie vegan live-edge snackwave
+      pok pok.\r\n\r\n"
+    - '2017-12-31 17:07:48.281413'
+    - '2017-12-31 17:08:24.071527'
+    - 2
+    - my-struggle.jpg
+    - image/jpeg
+    - 40456
+    - '2017-12-31 17:07:47.971261'
+    - 5
+  - - 17
+    - Moon Palace
+    - Paul Auster
+    - 1989
+    - Salvia pabst bicycle rights affogato, narwhal blog cray asymmetrical enamel
+      pin bitters try-hard woke air plant. Chartreuse woke selvage, helvetica paleo
+      single-origin coffee chambray tote bag ennui microdosing wayfarers. Vegan raw
+      denim unicorn post-ironic. Heirloom iPhone organic +1, DIY coloring book unicorn
+      wolf selvage subway tile. Subway tile gochujang cardigan PBR&B, artisan hoodie
+      craft beer etsy messenger bag kombucha la croix selvage chartreuse marfa listicle.
+    - '2017-12-31 17:14:37.888068'
+    - '2017-12-31 17:14:37.888068'
+    - 2
+    - moon_palace.jpg
+    - image/jpeg
+    - 28265
+    - '2017-12-31 17:14:37.635984'
+    - 5
+  - - 18
+    - Revolutionary Road
+    - Richard Yates
+    - 1961
+    - 'In the hopeful 1950s, Frank and April Wheeler appear to be a model couple:
+      bright, beautiful, talented, with two young children and a starter home in the
+      suburbs. Perhaps they married too young and started a family too early. Maybe
+      Frank''s job is dull. And April never saw herself as a housewife. Yet they have
+      always lived on the assumption that greatness is only just around the corner.
+      But now that certainty is about to crumble. With heartbreaking compassion and
+      remorseless clarity, Richard Yates shows how Frank and April mortgage their
+      spiritual birthright, betraying not only each other, but their best selves.'
+    - '2018-01-03 20:13:14.136917'
+    - '2018-01-03 20:13:14.136917'
+    - 2
+    - revolutionary_road.jpg
+    - image/jpeg
+    - 35840
+    - '2018-01-03 20:13:13.758906'
+    - 3
+  - - 19
+    - The Well-Grounded Rubyist
+    - David A. Black
+    - 2014
+    - Lorem ipsum dolor amet wayfarers salvia vape, pork belly kinfolk roof party
+      vinyl neutra artisan food truck tumblr XOXO. Street art butcher master cleanse
+      migas trust fund, palo santo pop-up squid. Keffiyeh drinking vinegar yuccie,
+      skateboard vape put a bird on it pour-over pork belly hammock succulents photo
+      booth +1 wolf tofu. Echo park ethical you probably haven't heard of them palo
+      santo offal. Brooklyn hexagon VHS, skateboard cliche live-edge roof party health
+      goth cronut sartorial biodiesel tbh sriracha.
+    - '2018-01-04 22:32:43.429225'
+    - '2018-01-04 22:32:43.429225'
+    - 4
+    - well-g-rubyist.jpeg
+    - image/jpeg
+    - 7289
+    - '2018-01-04 22:32:43.103545'
+    - 5
+
+---
+genres:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Crime
+    - '2017-12-12 15:49:51.147050'
+    - '2017-12-12 15:49:51.147050'
+  - - 2
+    - Fiction
+    - '2017-12-12 16:44:16.964859'
+    - '2017-12-12 16:44:16.964859'
+  - - 3
+    - Poetry
+    - '2017-12-13 16:54:31.993237'
+    - '2017-12-13 16:54:31.993237'
+  - - 4
+    - Technology
+    - '2018-01-04 19:47:32.996761'
+    - '2018-01-04 19:47:32.996761'
+
+---
+reviews:
+  columns:
+  - id
+  - rating
+  - comment
+  - user_id
+  - book_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 5
+    - Awesome read! Fav book ever!
+    - 1
+    - 1
+    - '2017-12-12 19:35:01.972102'
+    - '2017-12-12 20:24:57.757613'
+  - - 2
+    - 5
+    - Changed my mind! Sooooo good
+    - 1
+    - 1
+    - '2017-12-12 19:47:25.144249'
+    - '2017-12-12 20:25:52.450186'
+  - - 4
+    - 5
+    - Loved it!
+    - 2
+    - 2
+    - '2017-12-12 22:16:29.750186'
+    - '2017-12-12 22:16:29.750186'
+  - - 5
+    - 5
+    - I LOVE THIS BOOK
+    - 1
+    - 9
+    - '2017-12-13 18:11:16.214802'
+    - '2017-12-13 18:11:16.214802'
+  - - 6
+    - 5
+    - Favorite beat poet!
+    - 4
+    - 10
+    - '2017-12-29 20:38:12.442248'
+    - '2017-12-29 20:38:12.442248'
+  - - 8
+    - 4
+    - Very disturbing... but great read nevertheless!
+    - 4
+    - 4
+    - '2017-12-29 21:14:07.260280'
+    - '2017-12-29 21:14:51.788150'
+  - - 10
+    - 3
+    - the movie was better
+    - 3
+    - 1
+    - '2017-12-29 21:24:18.803303'
+    - '2017-12-29 21:24:18.803303'
+  - - 15
+    - 5
+    - Best book ever!
+    - 5
+    - 17
+    - '2017-12-31 17:15:35.078583'
+    - '2017-12-31 17:15:35.078583'
+  - - 16
+    - 3
+    - Was alright...
+    - 3
+    - 5
+    - '2018-01-03 20:27:18.305184'
+    - '2018-01-03 20:27:18.305184'
+  - - 17
+    - 5
+    - Very inspiring read!
+    - 3
+    - 2
+    - '2018-01-04 20:31:45.784933'
+    - '2018-01-04 20:31:45.784933'
+  - - 18
+    - 5
+    - Best book ever!
+    - 5
+    - 19
+    - '2018-01-04 22:33:01.797486'
+    - '2018-01-04 22:33:01.797486'
+  - - 128
+    - 4
+    - it's greatttt
+    - 5
+    - 10
+    - '2018-01-26 22:20:20.066633'
+    - '2018-01-26 22:20:20.066633'
+  - - 129
+    - 4
+    - soooo goooooodddddd
+    - 5
+    - 10
+    - '2018-01-26 22:24:38.606313'
+    - '2018-01-26 22:24:38.606313'
+  - - 130
+    - 4
+    - zvfzf
+    - 5
+    - 10
+    - '2018-01-26 22:25:08.995649'
+    - '2018-01-26 22:25:08.995649'
+  - - 131
+    - 4
+    - yoooo
+    - 5
+    - 10
+    - '2018-01-26 22:29:53.127769'
+    - '2018-01-26 22:29:53.127769'
+  - - 132
+    - 3
+    - kkkknlknlknl
+    - 5
+    - 10
+    - '2018-01-26 22:31:20.576578'
+    - '2018-01-26 22:31:20.576578'
+  - - 133
+    - 3
+    - fgjklfgfgjkl
+    - 5
+    - 10
+    - '2018-01-26 22:33:00.414202'
+    - '2018-01-26 22:33:00.414202'
+  - - 134
+    - 1
+    - nope
+    - 5
+    - 10
+    - '2018-01-26 22:33:35.023524'
+    - '2018-01-26 22:33:35.023524'
+  - - 135
+    - 5
+    - sickckckck
+    - 5
+    - 10
+    - '2018-01-26 22:34:21.378821'
+    - '2018-01-26 22:34:21.378821'
+  - - 151
+    - 4
+    - dfjsjfddfjfdj
+    - 5
+    - 10
+    - '2018-01-28 22:28:10.431439'
+    - '2018-01-28 22:28:10.431439'
+  - - 152
+    - 3
+    - ",,,,kkkkmk"
+    - 5
+    - 10
+    - '2018-01-28 22:42:13.019696'
+    - '2018-01-28 22:42:13.019696'
+  - - 153
+    - 4
+    - dsjfjddj
+    - 5
+    - 10
+    - '2018-01-28 23:20:02.969796'
+    - '2018-01-28 23:20:02.969796'
+  - - 157
+    - 3
+    - decent read
+    - 5
+    - 18
+    - '2018-01-28 23:41:31.706230'
+    - '2018-01-28 23:41:31.706230'
+  - - 158
+    - 3
+    - pretty good
+    - 5
+    - 18
+    - '2018-01-28 23:42:21.011072'
+    - '2018-01-28 23:42:21.011072'
+  - - 165
+    - 4
+    - ",m "
+    - 5
+    - 18
+    - '2018-01-29 00:02:52.580303'
+    - '2018-01-29 00:02:52.580303'
+  - - 177
+    - 1
+    - klafnsg
+    - 5
+    - 18
+    - '2018-01-29 01:02:28.578052'
+    - '2018-01-29 01:02:28.578052'
+  - - 185
+    - 3
+    - kjajs
+    - 5
+    - 18
+    - '2018-01-29 01:40:18.325784'
+    - '2018-01-29 01:40:18.325784'
+  - - 186
+    - 2
+    - cnz
+    - 5
+    - 18
+    - '2018-01-29 02:24:05.148557'
+    - '2018-01-29 02:24:05.148557'
+  - - 187
+    - 5
+    - mkmm,m
+    - 5
+    - 18
+    - '2018-01-29 02:25:57.184560'
+    - '2018-01-29 02:25:57.184560'
+  - - 192
+    - 2
+    - nnn
+    - 5
+    - 18
+    - '2018-01-29 02:31:04.823138'
+    - '2018-01-29 02:31:04.823138'
+  - - 208
+    - 4
+    - mmm
+    - 5
+    - 16
+    - '2018-01-29 02:53:49.533205'
+    - '2018-01-29 02:53:49.533205'
+  - - 234
+    - 3
+    - dsf
+    - 5
+    - 19
+    - '2018-01-29 03:45:08.781030'
+    - '2018-01-29 03:45:08.781030'
+  - - 235
+    - 3
+    - sfgdfgsdfgsd
+    - 5
+    - 19
+    - '2018-01-29 03:46:03.348470'
+    - '2018-01-29 03:46:03.348470'
+  - - 236
+    - 4
+    - mn,nn
+    - 5
+    - 19
+    - '2018-01-29 03:52:15.546900'
+    - '2018-01-29 03:52:15.546900'
+  - - 237
+    - 3
+    - zvlx;
+    - 5
+    - 19
+    - '2018-01-29 04:00:40.516261'
+    - '2018-01-29 04:00:40.516261'
+  - - 238
+    - 4
+    - adfgs
+    - 5
+    - 19
+    - '2018-01-29 04:11:08.213563'
+    - '2018-01-29 04:11:08.213563'
+  - - 239
+    - 4
+    - fgsd
+    - 5
+    - 19
+    - '2018-01-29 04:14:30.476126'
+    - '2018-01-29 04:14:30.476126'
+  - - 240
+    - 4
+    - dfgs
+    - 5
+    - 19
+    - '2018-01-29 04:24:48.037074'
+    - '2018-01-29 04:24:48.037074'
+  - - 270
+    - 4
+    - dfgfgda
+    - 5
+    - 15
+    - '2018-01-29 05:28:37.631080'
+    - '2018-01-29 05:28:37.631080'
+  - - 271
+    - 2
+    - fdddff
+    - 5
+    - 15
+    - '2018-01-29 05:28:45.610767'
+    - '2018-01-29 05:28:45.610767'
+  - - 275
+    - 4
+    - dvdf
+    - 5
+    - 9
+    - '2018-01-31 19:26:13.442971'
+    - '2018-01-31 19:26:13.442971'
+  - - 276
+    - 2
+    - sdaafsd
+    - 5
+    - 10
+    - '2018-01-31 19:58:04.111319'
+    - '2018-01-31 19:58:04.111319'
+  - - 285
+    - 4
+    - great stufff
+    - 5
+    - 10
+    - '2018-02-11 05:11:53.468992'
+    - '2018-02-11 05:11:53.468992'
+  - - 288
+    - 5
+    - my fav
+    - 5
+    - 18
+    - '2018-02-11 05:31:51.550055'
+    - '2018-02-11 05:31:51.550055'
+  - - 296
+    - 3
+    - sooooo
+    - 3
+    - 4
+    - '2018-02-11 18:01:54.230959'
+    - '2018-02-11 18:01:54.230959'
+  - - 323
+    - 3
+    - lkjhgfdsa
+    - 3
+    - 8
+    - '2018-02-11 20:01:09.268534'
+    - '2018-02-11 20:01:09.268534'
+  - - 327
+    - 5
+    - goooodddd
+    - 3
+    - 8
+    - '2018-02-11 20:06:02.730415'
+    - '2018-02-11 20:06:02.730415'
+  - - 332
+    - 4
+    - '12345'
+    - 3
+    - 8
+    - '2018-02-11 20:11:40.619989'
+    - '2018-02-11 20:11:40.619989'
+  - - 343
+    - 3
+    - yoooo
+    - 3
+    - 17
+    - '2018-02-11 20:16:55.746422'
+    - '2018-02-11 20:16:55.746422'
+  - - 345
+    - 5
+    - errrrrrrrrr
+    - 3
+    - 8
+    - '2018-02-11 20:18:37.470960'
+    - '2018-02-11 20:18:37.470960'
+  - - 346
+    - 3
+    - '1234567654321'
+    - 3
+    - 4
+    - '2018-02-11 20:32:14.984893'
+    - '2018-02-11 20:32:14.984893'
+  - - 347
+    - 4
+    - asdfrewq
+    - 3
+    - 4
+    - '2018-02-11 20:32:41.047869'
+    - '2018-02-11 20:32:41.047869'
+  - - 348
+    - 4
+    - '12345'
+    - 3
+    - 5
+    - '2018-02-11 20:35:41.082700'
+    - '2018-02-11 20:35:41.082700'
+  - - 349
+    - 4
+    - ffffff
+    - 3
+    - 8
+    - '2018-02-11 20:36:12.744487'
+    - '2018-02-11 20:36:12.744487'
+  - - 350
+    - 4
+    - love it
+    - 3
+    - 9
+    - '2018-02-11 21:04:30.674073'
+    - '2018-02-11 21:04:30.674073'
+  - - 351
+    - 5
+    - awesome
+    - 3
+    - 10
+    - '2018-02-11 21:04:52.333880'
+    - '2018-02-11 21:04:52.333880'
+  - - 352
+    - 5
+    - pretty dark stuff
+    - 3
+    - 12
+    - '2018-02-11 21:05:33.565899'
+    - '2018-02-11 21:05:33.565899'
+  - - 353
+    - 5
+    - great
+    - 3
+    - 5
+    - '2018-02-11 21:27:56.795030'
+    - '2018-02-11 21:27:56.795030'
+  - - 359
+    - 4
+    - '123'
+    - 3
+    - 2
+    - '2018-02-11 21:42:32.209248'
+    - '2018-02-11 21:42:32.209248'
+  - - 360
+    - 4
+    - greatttt
+    - 3
+    - 2
+    - '2018-02-11 21:43:49.525492'
+    - '2018-02-11 21:43:49.525492'
+  - - 362
+    - 5
+    - testrrrrr
+    - 3
+    - 4
+    - '2018-02-11 21:48:03.178619'
+    - '2018-02-11 21:48:03.178619'
+  - - 363
+    - 5
+    - '123123'
+    - 3
+    - 5
+    - '2018-02-11 21:49:37.940747'
+    - '2018-02-11 21:49:37.940747'
+  - - 364
+    - 4
+    - helloooo
+    - 3
+    - 5
+    - '2018-02-12 02:34:22.069687'
+    - '2018-02-12 02:34:22.069687'
+  - - 365
+    - 4
+    - boooo
+    - 3
+    - 15
+    - '2018-02-12 02:36:03.924872'
+    - '2018-02-12 02:36:03.924872'
+  - - 367
+    - 4
+    - yooooo
+    - 4
+    - 13
+    - '2018-02-12 02:38:09.066443'
+    - '2018-02-12 02:38:09.066443'
+  - - 368
+    - 5
+    - good stuff
+    - 4
+    - 13
+    - '2018-02-12 02:39:34.955635'
+    - '2018-02-12 02:39:34.955635'
+  - - 369
+    - 4
+    - hey hey hey
+    - 4
+    - 13
+    - '2018-02-12 02:40:44.659652'
+    - '2018-02-12 02:40:44.659652'
+  - - 370
+    - 1
+    - nope
+    - 4
+    - 13
+    - '2018-02-12 02:41:00.413258'
+    - '2018-02-12 02:41:00.413258'
+  - - 384
+    - 4
+    - yeahhhh
+    - 1
+    - 8
+    - '2018-02-12 02:58:05.686801'
+    - '2018-02-12 02:58:05.686801'
+  - - 385
+    - 2
+    - meh
+    - 1
+    - 2
+    - '2018-02-12 02:59:07.351839'
+    - '2018-02-12 02:59:07.351839'
+  - - 386
+    - 4
+    - jk
+    - 1
+    - 2
+    - '2018-02-12 02:59:38.341372'
+    - '2018-02-12 02:59:38.341372'
+  - - 387
+    - 2
+    - nooooo
+    - 1
+    - 2
+    - '2018-02-12 03:12:38.315372'
+    - '2018-02-12 03:12:38.315372'
+  - - 389
+    - 4
+    - nice
+    - 1
+    - 12
+    - '2018-02-12 15:56:16.245584'
+    - '2018-02-12 15:56:16.245584'
+  - - 390
+    - 4
+    - dfsdf
+    - 1
+    - 12
+    - '2018-02-12 16:24:28.412149'
+    - '2018-02-12 16:24:28.412149'
+  - - 392
+    - 4
+    - '123'
+    - 1
+    - 2
+    - '2018-02-12 17:35:03.768616'
+    - '2018-02-12 17:35:03.768616'
+  - - 393
+    - 4
+    - Best book ever
+    - 1
+    - 2
+    - '2018-02-12 18:51:38.535771'
+    - '2018-02-12 18:51:38.535771'
+  - - 394
+    - 4
+    - best book ever
+    - 1
+    - 2
+    - '2018-02-12 18:58:56.662405'
+    - '2018-02-12 18:58:56.662405'
+  - - 397
+    - 4
+    - Best book ever
+    - 1
+    - 4
+    - '2018-02-12 20:15:58.524661'
+    - '2018-02-12 20:15:58.524661'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - name
+  - image
+  - uid
+  - provider
+  - oauth_token
+  - oauth_expires_at
+  records: 
+  - - 1
+    - robin@gmail.com
+    - "$2a$11$iwM7S39kmKFe6sB4JPGj7uAQdyAcQijh1cyagrXmZm0jeM0VH81jW"
+    - 
+    - 
+    - 
+    - 20
+    - '2018-02-12 02:46:07.121629'
+    - '2018-01-03 20:07:19.581398'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2017-12-12 04:15:11.630041'
+    - '2018-02-12 02:46:07.122490'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 2
+    - charlie@hotmail.com
+    - "$2a$11$e97DPTDU63p9uXclHmBgAeBraHQ7.AVltlY1srU6kkYrd/IiBJQ1i"
+    - 
+    - 
+    - 
+    - 2
+    - '2018-01-03 19:36:14.430787'
+    - '2017-12-12 22:16:08.668041'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2017-12-12 22:16:08.662138'
+    - '2018-01-03 19:36:14.431467'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 3
+    - charlie@dog.com
+    - "$2a$11$C7MDSw5curoMfN4/gEU8keB1HDwnrB/8/u1DxBwjYnN2S2w/ZJY7W"
+    - 
+    - 
+    - 
+    - 10
+    - '2018-04-05 15:58:06.013859'
+    - '2018-02-12 02:35:13.135383'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2017-12-13 23:05:57.309693'
+    - '2018-04-05 15:58:06.015465'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 4
+    - david@bowie.com
+    - "$2a$11$A2b0x2TriKKLPGpqW5824eYgSY0Zgf3dabkqAj9ARjKbRpi9rHZRa"
+    - 
+    - 
+    - 
+    - 8
+    - '2018-02-12 02:36:51.380799'
+    - '2018-01-03 20:34:50.555635'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2017-12-29 16:07:13.932288'
+    - '2018-02-12 02:36:51.381671'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 5
+    - robin.pahlman@gmail.com
+    - "$2a$11$IRXc0Fol1Z/nwqeOEcayn.0E7DnBkhVARbC7AvNgLFxgwZJ2LhzPm"
+    - 
+    - 
+    - 
+    - 23
+    - '2018-03-06 19:04:52.018598'
+    - '2018-02-12 02:45:25.326840'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2017-12-29 22:39:43.595096'
+    - '2018-03-06 19:04:52.019891'
+    - 
+    - 
+    - '113850168379358325953'
+    - google_oauth2
+    - 
+    - 
