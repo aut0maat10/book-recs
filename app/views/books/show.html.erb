@@ -110,7 +110,7 @@
               return $(this).attr('data-score');
               $('.star-rating').raty('reload')
             },
-            path: '/assets'
+            path: '/images'
           });
 
           $('.average-review-rating').raty({
@@ -118,11 +118,11 @@
               score: function () {
                 return $(this).attr('data-score')
               },
-              path: '/assets'
+              path: '/images'
             });
 
           $('#rating-form').raty({
-              path: '/assets',
+              path: '/images',
               scoreName: 'review[rating]'
             });
         });
@@ -145,7 +145,7 @@
       return $(this).attr('data-score');
       $('.star-rating').raty('reload')
     },
-    path: '/assets'
+    path: '/images'
   });
 </script>
 
@@ -156,13 +156,13 @@
     score: function () {
       return $(this).attr('data-score')
     },
-    path: '/assets'
+    path: '/images'
   });
 </script>
 
 <script>
   $('#rating-form').raty({
-    path: '/assets',
+    path: '/images',
     scoreName: 'review[rating]'
   });
 </script>
