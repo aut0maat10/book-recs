@@ -40,6 +40,7 @@ gem 'pry', '~> 0.11.3'
 # gem 'capistrano-rails', group: :development
 gem 'devise', '~> 4.3'
 gem 'paperclip', '~> 5.1'
+gem 'aws-sdk', '~> 2.6'
 gem 'omniauth', '~> 1.7', '>= 1.7.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'omniauth-google-oauth2'
