@@ -4,6 +4,13 @@ BookRecs is an app for book recommendations and reviews, where a user can add, r
 
 ![Alt text](https://i.imgur.com/dKzLcay.png)
 
+## Live Demo
+
+Check out BookRecs on Heroku: https://book-recs.herokuapp.com/
+Log in as test user:
+Email: user@example.com
+Password: password
+
 ## Installation
 
 ## Usage
